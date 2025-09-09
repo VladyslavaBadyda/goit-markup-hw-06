@@ -52,7 +52,7 @@ button {
 
 a {
     text-decoration: none;
-    color: currentColor;
+    color: inherit;
 }
 
 .visually-hidden {
@@ -348,8 +348,8 @@ a {
 
 /*================== section1 ======================*/
 
-.section-button:hover,
-.section-button:focus {
+.button:hover,
+.button:focus {
     background: var(--color-ocean);
 }
 
@@ -464,11 +464,9 @@ a {
 }
 
 .ulkatwosection {
-    color: var(--color-navy-blue);
     display: flex;
-    gap: 72px;
-    max-width: 288px;
     flex-wrap: wrap;
+    gap: 72px;
 }
 
 /* icons */
@@ -489,7 +487,7 @@ a {
 
 .points-one-text {
     width: 100%;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -510,7 +508,6 @@ a {
 
     .ulkatwosection {
         display: flex;
-        max-width: 736px;
         gap: 24px;
     }
 
@@ -1061,3 +1058,233 @@ a {
         gap: 24px;
     }
 }
+
+/* =================MODALKA======================= */
+
+.backdrop {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 47, 66, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.backdrop.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.backdrop:not(.is-open) .modal {
+    transform: translate(-50%, -50%) scale(1.5);
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 408px;
+    min-height: 584px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
+        0 2px 1px 0 rgba(0, 0, 0, 0.2);
+    background: var(--color-dairy);
+    border-radius: 4px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 72px 24px 24px 24px;
+    width: 288px;
+}
+
+.backdrop:not(.is-open) .modal {
+    transform: translate(-50%, -100%);
+}
+
+.modal-button {
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    border-radius: 50%;
+    top: 24px;
+    right: 24px;
+    cursor: pointer;
+    background-color: var(--color-cornflower);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-button:hover,
+.modal-button:focus {
+    background-color: var(--color-ocean);
+    border: none;
+    fill: var(--color-white);
+}
+
+.button-close {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.text-modalka {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: var(--color-navy-blue);
+    margin-bottom: 16px;
+    width: 256px
+}
+
+.form-div {
+    margin-bottom: 8px;
+}
+
+.form-div-label {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: var(--color-light-slate);
+    display: block;
+    margin-bottom: 4px;
+    align-items: center;
+}
+
+.form-input {
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    padding-left: 38px;
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:focus {
+    border-color: var(--color-iris);
+}
+
+.form-icon {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.text-area {
+    width: 100%;
+    height: 120px;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    background-color: transparent;
+    padding: 8px 16px;
+    outline: transparent;
+    resize: none;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.text-area::placeholder {
+    color: rgba(46, 47, 66, 0.4);
+}
+
+.label-checkbox {
+    width: 360px;
+    height: 16px;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: var(--color-light-slate);
+    display: flex;
+    align-items: center;
+}
+
+.label-div {
+    fill: var(--color-navy-blue);
+    position: relative;
+}
+
+.label-div svg {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.form-input:focus~svg {
+    fill: var(--color-iris);
+}
+
+.text-area {
+    color: rgba(46, 47, 66, 0.4);
+    background-color: transparent;
+    padding: 8px 16px;
+    outline: transparent;
+    border-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.text-area:focus {
+    border-color: var(--color-iris);
+}
+
+.form-div-coment {
+    margin-bottom: 16px;
+}
+
+.checkbox-div {
+    margin-bottom: 24px;
+}
+
+.span-checkbox {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    margin-right: 8px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    fill: transparent;
+}
+
+#user-privacy:checked+.label-checkbox .span-checkbox {
+    background-color: var(--color-ocean);
+    border: none;
+    fill: var(--color-cloud);
+}
+
+.highlight {
+    color: var(--color-iris);
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+    .modal {
+        width: 408px;
+    }
+
+    .span-checkbox {
+        width: 360px;
+    }
+
+    .text-modalka {
+        width: 360px;
+    }
+}
+
