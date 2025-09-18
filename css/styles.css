@@ -179,6 +179,9 @@ a {
     margin-bottom: auto;
 }
 
+.color-studio {
+    color: var(--color-iris);
+}
 
 .mobile-menu-li {
     padding-bottom: 40px;
@@ -200,6 +203,7 @@ a {
 .mobile-tel-link {
     padding-bottom: 24px;
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    font-style: normal;
 }
 
 .mobile-icons {
@@ -208,6 +212,10 @@ a {
     align-items: center;
     gap: 40px;
     padding-top: 48px;
+}
+
+.color-tel {
+    color: var(--color-iris);
 }
 
 .mobile-icons-li {
@@ -249,7 +257,6 @@ a {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-attachment: fixed;
 }
 
 .business-text {
@@ -330,21 +337,22 @@ a {
 }
 
 .section-team {
-    margin-bottom: 96px;
+    background-color: var(--color-cloud);
 }
 
 .card {
     margin: 0 auto;
-    height: 40px;
-    margin-bottom: 72px;
     text-align: center;
+    padding-top: 96px;
+    margin-bottom: 72px;
+    font-weight: 700;
+    font-size: 36px;
 }
 
 .card-foto {
     display: flex;
     flex-wrap: wrap;
-    gap: 72px;
-    margin-bottom: 96px;
+    gap: 24px 64px;
     justify-content: center;
 }
 
@@ -415,6 +423,8 @@ a {
 .section-app {
     width: 320px;
     margin: 0 auto;
+    padding-bottom: 96px;
+    padding-top: 96px;
 }
 
 .portfolio {
@@ -433,8 +443,7 @@ a {
     flex-wrap: wrap;
     column-gap: 24px;
     row-gap: 48px;
-    justify-content: center;
-    margin-bottom: 96px;
+    justify-content: center; 
 }
 
 .portfolio-li {
@@ -453,7 +462,6 @@ a {
 .portfolio-images {
     position: relative;
     overflow: hidden;
-    width: 288px;
 }
 
 .pops-paragraf {
@@ -488,8 +496,9 @@ a {
 
 .footer {
     background-color: var(--color-navy-blue);
-    width: 320px;
     margin: 0 auto;
+    padding-bottom: 96px;
+    padding-top: 96px;
 }
 
 .container-footer {
@@ -498,7 +507,6 @@ a {
 }
 
 .daddy-logo-p {
-    margin-top: 96px;
     margin-bottom: 72px;
 }
 
@@ -531,8 +539,8 @@ a {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--color-white);
-    margin: 0 auto;
-    margin-bottom: 72px;
+    margin-right: 56px;
+    margin-bottom: 56px;
 }
 
 .team-icons-href {
@@ -616,7 +624,6 @@ a {
     background: var(--color-iris);
     border: none;
     margin: 0 auto;
-    margin-bottom: 72px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -682,7 +689,7 @@ a {
     background: var(--color-dairy);
     border-radius: 4px;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    padding: 72px 24px 24px 24px;
+    padding: 72px 16px 16px 16px;
     width: 288px;
 }
 
@@ -784,8 +791,6 @@ a {
 }
 
 .label-checkbox {
-    width: 360px;
-    height: 16px;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
@@ -844,6 +849,7 @@ a {
         border 250ms cubic-bezier(0.4, 0, 0.2, 1),
         fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     fill: transparent;
+    flex-shrink: 0;
 }
 
 #user-privacy:checked+.label-checkbox .span-checkbox {
@@ -858,11 +864,7 @@ a {
 }
 
 
-
-
 /* ===================mediaaaa768================= */
-
-
 
 
 @media screen and (min-width:768px) {
@@ -871,6 +873,7 @@ a {
     }
     .modal {
         width: 408px;
+        padding: 72px 24px 24px 24px;
     }
 
     .text-modalka {
@@ -964,7 +967,7 @@ a {
         font-size: 56px;
         line-height: 1.07;
     }
-    
+
     .business {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
@@ -991,12 +994,11 @@ a {
 
     .ulkatwosection {
         display: flex;
-        gap: 24px;
+        gap: 72px 24px;
     }
 
     .points-li {
         width: calc((100% - 24px) / 2);
-        padding-bottom: 72px;
     }
 
     .container-team {
@@ -1024,6 +1026,7 @@ a {
     }
 
     .card-foto {
+        gap: 64px 24px;
         column-gap: 24px;
     }
 
@@ -1036,14 +1039,22 @@ a {
         margin-bottom: 72px;
     }
 
+    .portfolio-li {
+        width: calc((100% - 24px)/ 2);
+    }
+
     .portfolio-foto {
         column-gap: 24px;
         row-gap: 64px;
         margin-bottom: 96px;
     }
 
+    .container-footer {
+        width: 584px;
+    }
+
     .footer {
-        width: 768px;
+        padding: 100px 0;
     }
 
     .footer-form {
@@ -1051,21 +1062,14 @@ a {
         gap: 24px;
     }
 
+    .footer-input {
+        width: 264px;
+    }
+
     .daddy-logo-p {
         width: 264px;
         padding-top: 0;
-    }
-
-    .div-icons {
-        margin-top: 96px;
-    }
-
-    .container-footer {
-        margin-left: 108px;
-    }
-
-    .footer-form-subscribe {
-        margin-bottom: 96px;
+        padding-right: 24px;
     }
 
     .footer-subscribe {
@@ -1240,8 +1244,7 @@ a {
     .container-footer {
         display: flex;
         align-items: baseline;
-        margin-left: 156px;
-        margin-right: 159px;
+        margin: 0 auto;
     }
 
     .daddy-logo-p {
@@ -1262,11 +1265,15 @@ a {
     }
 
     .footer-form-subscribe {
-        margin-left: auto;
+        margin-left: 80px;
     }
 
     .footer-form {
         display: flex;
         gap: 24px;
+    }
+
+    .footer-input {
+        width: 264px;
     }
 }
