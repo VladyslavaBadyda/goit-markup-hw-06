@@ -253,7 +253,7 @@ a {
     padding: 72px 0;
     margin: 0 auto;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-        url(../images/hero.jpg);
+        url(../images/section/desk-min.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -504,6 +504,7 @@ a {
 .container-footer {
     display: flex;
     flex-wrap: wrap;
+    margin-left: 108px;
 }
 
 .daddy-logo-p {
@@ -971,14 +972,14 @@ a {
     .business {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
-            url(../images/hero.jpg);
+            url(../images/section/tab-min.jpg);
     }
 
     @media (resolution: 192dpi) {
         .business {
             background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                     rgba(46, 47, 66, 0.7)),
-                url(../images/hero.jpg);
+                url(../images/section/tab@2x-min.jpg);
         }
     }
 
@@ -1127,14 +1128,14 @@ a {
     .business {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
-            url(../images/hero.jpg);
+            url(../images/section/desk-min.jpg);
     }
 
     @media (resolution: 192dpi) {
         .business {
             background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                     rgba(46, 47, 66, 0.7)),
-                url(../images/hero.jpg);
+                url(../images/section/desk@2x-min.jpg);
         }
     }
 
