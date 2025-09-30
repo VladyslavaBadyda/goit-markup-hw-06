@@ -253,10 +253,18 @@ a {
     padding: 72px 0;
     margin: 0 auto;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-        url(../images/section/desk-min.jpg);
+        url(../images/section/mob-min.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+
+@media (resolution: 192dpi) {
+    .business {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/section/mob@2x-min.jpg);
+    }
 }
 
 .business-text {
@@ -338,12 +346,14 @@ a {
 
 .section-team {
     background-color: var(--color-cloud);
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 .card {
     margin: 0 auto;
     text-align: center;
-    padding-top: 96px;
+    /* padding-top: 96px; */
     margin-bottom: 72px;
     font-weight: 700;
     font-size: 36px;
@@ -352,7 +362,7 @@ a {
 .card-foto {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px 64px;
+    gap: 72px;
     justify-content: center;
 }
 
@@ -504,7 +514,8 @@ a {
 .container-footer {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 108px;
+    /* margin-left: 108px; */
+    justify-content: center;
 }
 
 .daddy-logo-p {
@@ -513,7 +524,6 @@ a {
 
 .footer-nav-studio {
     display: inline-block;
-    padding-bottom: 16px;
     padding-left: 86px;
     padding-right: 86px;
     color: var(--color-iris);
@@ -521,6 +531,7 @@ a {
     font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 18px;
+    margin-bottom: 16px;
 }
 
 .footer-nav-studio .footer-nav-logo-span {
@@ -532,6 +543,7 @@ a {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--color-cloud);
+    text-align: center;
 }
 
 .div-icons {
@@ -540,8 +552,9 @@ a {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--color-white);
-    margin-right: 56px;
-    margin-bottom: 56px;
+    /* margin-right: 56px; */
+    /* margin-bottom: 56px; */
+    margin-bottom: 72px;
 }
 
 .team-icons-href {
@@ -1023,7 +1036,7 @@ a {
 
     .section-team {
         background-color: var(--color-cloud);
-        padding: 96px 0;
+        padding: 120px 0;
     }
 
     .card-foto {
@@ -1051,7 +1064,7 @@ a {
     }
 
     .container-footer {
-        width: 584px;
+        /* width: 584px; */
     }
 
     .footer {
@@ -1202,7 +1215,7 @@ a {
     }
 
     .portfolio-foto {
-        width: 1128px;
+        /* width: 1128px; */
         row-gap: 48px;
     }
 
@@ -1238,7 +1251,7 @@ a {
     }
 
     .footer {
-        width: 1440px;
+        /* width: 1440px; */
         padding: 100px 0;
     }
 
@@ -1246,6 +1259,7 @@ a {
         display: flex;
         align-items: baseline;
         margin: 0 auto;
+        width: 1158px;
     }
 
     .daddy-logo-p {
