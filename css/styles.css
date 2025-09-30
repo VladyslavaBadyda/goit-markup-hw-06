@@ -675,7 +675,7 @@ a {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    /* transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -685,6 +685,7 @@ a {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop:not(.is-open) .modal {
@@ -696,7 +697,6 @@ a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 408px;
     min-height: 584px;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
         0 2px 1px 0 rgba(0, 0, 0, 0.2);
@@ -747,7 +747,7 @@ a {
     text-align: center;
     color: var(--color-navy-blue);
     margin-bottom: 16px;
-    width: 256px
+    /* width: 256px */
 }
 
 .form-div {
@@ -761,7 +761,6 @@ a {
     color: var(--color-light-slate);
     display: block;
     margin-bottom: 4px;
-    align-items: center;
 }
 
 .form-input {
@@ -793,7 +792,8 @@ a {
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
     background-color: transparent;
-    padding: 8px 16px;
+    /* padding: 8px 16px; */
+    padding: 16px 8px 16px 8px;
     outline: transparent;
     resize: none;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -811,6 +811,7 @@ a {
     color: var(--color-light-slate);
     display: flex;
     align-items: center;
+    gap: 8px;
 }
 
 .label-div {
